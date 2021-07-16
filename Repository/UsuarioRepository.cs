@@ -9,11 +9,15 @@ namespace AlimentosTFOQ.Repository
 {
     public class UsuarioRepository
     {
-        public UsuarioRepository() : base("tfoqConnectionString")
+        public List<Usuario> GetUsuario()
         {
+            Conexao banco = new Conexao();
 
+            List<Usuario> lista = new List<Usuario>();
+
+            lista = banco.Usuario.ToList();
+
+            return lista;
         }
-
-        public DbSet<Alimentos> Alimentos { get; set; }
     }
 }

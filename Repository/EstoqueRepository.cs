@@ -16,7 +16,7 @@ namespace AlimentosTFOQ.Repository
             List<Estoque> lista = new List<Estoque>();
 
             lista = banco.Estoque.ToList();
-
+            
             return lista;
         }
     }
