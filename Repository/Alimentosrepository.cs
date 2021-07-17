@@ -9,7 +9,7 @@ namespace AlimentosTFOQ.Repository
 {
     public class AlimentosRepository
     {
-        public List<Alimentos> GetAlimetos()
+        public List<Alimentos> GetAlimentos()
         {
             Conexao banco = new Conexao();
 
@@ -18,5 +18,9 @@ namespace AlimentosTFOQ.Repository
             lista = banco.Alimentos.ToList();
 
             return lista;
+
         }
+
+    }
+       
 }

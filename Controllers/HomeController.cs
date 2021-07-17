@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using AlimentosTFOQ.Models;
+using AlimentosTFOQ.Repository;
 
 namespace AlimentosTFOQ.Controllers
 {
@@ -10,6 +12,16 @@ namespace AlimentosTFOQ.Controllers
     {
         public ActionResult Index()
         {
+            AlimentosRepository repository = new AlimentosRepository();
+            List<Alimentos> lista = repository.GetAlimentos();
+
+            Usuario usuario = new Usuario();
+            usuario.Nome = "SAMIA MARIA";
+            usuario.AbrirLogin = true;
+            usuario.Senha = 1231;
+            UsuarioRepository repositoryuser = new UsuarioRepository();
+            repositoryuser.AddUsuario(usuario);
+
             return View();
         }
 

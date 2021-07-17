@@ -19,5 +19,20 @@ namespace AlimentosTFOQ.Repository
 
             return lista;
         }
+
+        internal List<Usuario> GetAlimentos()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal List<Usuario> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal void AddUsuario(Usuario usuario)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
