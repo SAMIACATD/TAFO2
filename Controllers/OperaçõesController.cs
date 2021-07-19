@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace AlimentosTFOQ.Controllers
 {
-    public class EstoqueController : Controller
+    public class OperaçõesController : Controller
     {
-        // GET: Estoque
+        // GET: Operações
         public ActionResult Index()
         {
             return View();

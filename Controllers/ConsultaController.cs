@@ -6,15 +6,10 @@ using System.Web.Mvc;
 
 namespace AlimentosTFOQ.Controllers
 {
-    public class AlimentosController : Controller
+    public class ConsultaController : Controller
     {
-        // GET: Alimentos
+        // GET: Consulta
         public ActionResult Index()
-        {
-            return View();
-        }
-
-        public ActionResult Cadastro()
         {
             return View();
         }

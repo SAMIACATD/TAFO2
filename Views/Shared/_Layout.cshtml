@@ -1,10 +1,10 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Meu Aplicativo ASP.NET</title>
+    <title>@ViewBag.Title - Controle de Alimento</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -17,13 +17,58 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Nome do aplicativo", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Controle de Alimento", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Início", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Sobre", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Cadastro
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Grupos de Produtos", "GrupoProduto", "Cadastro")</li>
+                            <li>@Html.ActionLink("Marcas de Produtos", "MarcaProduto", "Cadastro")</li>
+                            <li>@Html.ActionLink("Unidade de Medidas", "UnidadeMedida", "Cadastro")</li>
+                            <li>@Html.ActionLink("Produto", "Produto", "Cadastro")</li>
+                            <li>@Html.ActionLink("Fornecedor", "Fornecedor", "Cadastro")</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Operações
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Entrada de Produtos", "EntradaEstoque", "Operações")</li>
+                            <li>@Html.ActionLink("Saída de Produtos", "SaídaEstoque", "Operações")</li>
+                            <li>@Html.ActionLink("Lançamento de Perdas", "LançamentoPerdas", "Operações")</li>
+                            <li>@Html.ActionLink("Inventário de Estoque", "Inventário", "Operações")</li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Consulta
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Posição de Estoque", "PosiçãoEstoque", "Relatório")</li>
+                        </ul>
+
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Gráficos
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Entrada vs Saída Mês", "EntradaSaidaMes", "Gráfico")</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-right">
+                    <li>@Html.ActionLink("Sobre", "Sobre", "Home")</li>
                 </ul>
             </div>
         </div>

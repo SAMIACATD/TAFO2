@@ -1,0 +1,84 @@
+﻿@model List<AlimentosTFOQ.Models.GrupoProdutoModel>
+@{
+    ViewBag.Title = "Cadastro de Grupo de Produto";
+}
+<style>
+    #grid_cadastro > thead > tr th:nth-child(2) {
+        width: 110px;
+    }
+
+    #grid_cadastro > thead > tr th:nth-child(2) {
+        width: 200px;
+    }
+
+    #cadastro {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    #cadastro_cabecalho {
+        border-bottom: 1px #dddddd solid;
+    }
+
+    #cadastro_conteudo {
+        margin-top: 20px;
+    }
+
+    #cabecalho_grid {
+        margin-bottom: 20px;
+    }
+</style>
+<div id="cadastro">
+    <section id="cadastro_cabecalho">
+        <h1>@ViewBag.Title</h1>
+    </section>
+    <section id="cadastro_conteudo">
+        <div id="cabeçalho_grid" class="row">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-12">
+                        <a id="btn_incluir" class="btn btn-success" role="button"><i class="glyphicon glyphicon-plus"></i> incluir</a>
+
+                    </div>
+                    <table id="grid_cadastro" class="table table-bordered table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Ativo</th>
+                                <th>Ação</th>
+                            </tr>
+
+                        </thead>
+
+                        <tboby>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Nome</td>
+                                    <td>@{var Ativo = (item.Ativo ? "SIM" : "NÃO");}@Ativo</td>
+                                    <td>
+                                        <a class="btn btn-primary btn-alterar" role="button"><i class="glyphicon glyphicon-pencil"></i> Alterar</a>
+                                        <a class="btn btn-danger btn-excluir" role="button"><i class="glyphicon glyphicon-trash"></i> Excluir</a>
+                                        <a class="btn btn-info btn-detalhe" role="button"><i class="glyphicon glyphicon-search"></i> Detalhes</a>
+                                    </td>
+                                </tr>
+                            }
+
+
+                        </tboby>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+</div>
+}
+
+
+

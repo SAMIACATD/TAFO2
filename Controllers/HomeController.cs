@@ -12,16 +12,6 @@ namespace AlimentosTFOQ.Controllers
     {
         public ActionResult Index()
         {
-            AlimentosRepository repository = new AlimentosRepository();
-            List<Alimentos> lista = repository.GetAlimentos();
-
-            Usuario usuario = new Usuario();
-            usuario.Nome = "SAMIA MARIA";
-            usuario.AbrirLogin = true;
-            usuario.Senha = 1231;
-            UsuarioRepository repositoryuser = new UsuarioRepository();
-            repositoryuser.AddUsuario(usuario);
-
             return View();
         }
 
@@ -38,5 +28,7 @@ namespace AlimentosTFOQ.Controllers
 
             return View();
         }
+
+
     }
 }

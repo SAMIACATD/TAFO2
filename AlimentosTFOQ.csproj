@@ -127,16 +127,14 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\AlimentosController.cs" />
-    <Compile Include="Controllers\EstoqueController.cs" />
+    <Compile Include="Controllers\CadastroController.cs" />
+    <Compile Include="Controllers\ConsultaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="Controllers\OperaçõesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Alimentos.cs" />
-    <Compile Include="Models\Estoque.cs" />
-    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Models\GrupoProdutoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\Alimentosrepository.cs" />
     <Compile Include="Repository\Conexao.cs" />
@@ -179,13 +177,18 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Alimentos\Cadastro.cshtml" />
+    <Content Include="Views\Cadastro\Produto.cshtml" />
+    <Content Include="Views\Cadastro\Fornecedor.cshtml" />
+    <Content Include="Views\Cadastro\GrupoProduto.cshtml" />
+    <Content Include="Views\Cadastro\MarcaProduto.cshtml" />
+    <Content Include="Views\Cadastro\UnidadeMedida.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Imagens\" />
+    <Folder Include="Views\Consulta\" />
     <Folder Include="Views\Estoque\" />
-    <Folder Include="Views\Usuario\" />
+    <Folder Include="Views\Operações\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
