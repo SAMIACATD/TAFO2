@@ -40,11 +40,7 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Entrada de Produtos", "EntradaEstoque", "Operações")</li>
-                            <li>@Html.ActionLink("Saída de Produtos", "SaídaEstoque", "Operações")</li>
-                            <li>@Html.ActionLink("Lançamento de Perdas", "LançamentoPerdas", "Operações")</li>
-                            <li>@Html.ActionLink("Inventário de Estoque", "Inventário", "Operações")</li>
-
+                            <li>@Html.ActionLink("Entrada e Saída de Produtos", "EntradaSaidaEstoque", "Operações")</li>
                         </ul>
                     </li>
                     <li>
@@ -54,16 +50,6 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("Posição de Estoque", "PosiçãoEstoque", "Relatório")</li>
-                        </ul>
-
-                    </li>
-                    <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Gráficos
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Entrada vs Saída Mês", "EntradaSaidaMes", "Gráfico")</li>
                         </ul>
                     </li>
                 </ul>

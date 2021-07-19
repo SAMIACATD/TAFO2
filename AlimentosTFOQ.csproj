@@ -134,6 +134,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ConsultaEstoqueModel.cs" />
+    <Compile Include="Models\EntradaSaidaModel.cs" />
+    <Compile Include="Models\FornecedorModel.cs" />
+    <Compile Include="Models\UnidadeMedidaModel.cs" />
+    <Compile Include="Models\MarcaProdutoModel.cs" />
+    <Compile Include="Models\ProdutoModel - Cópia .cs" />
     <Compile Include="Models\GrupoProdutoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\Alimentosrepository.cs" />
@@ -182,13 +188,12 @@
     <Content Include="Views\Cadastro\GrupoProduto.cshtml" />
     <Content Include="Views\Cadastro\MarcaProduto.cshtml" />
     <Content Include="Views\Cadastro\UnidadeMedida.cshtml" />
+    <Content Include="Views\Operações\EntradaSaidaEstoque.cshtml" />
+    <Content Include="Views\Consulta\PosiçãoEstoque.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Imagens\" />
-    <Folder Include="Views\Consulta\" />
-    <Folder Include="Views\Estoque\" />
-    <Folder Include="Views\Operações\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
