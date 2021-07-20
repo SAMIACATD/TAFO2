@@ -11,6 +11,6 @@ namespace AlimentosTFOQ.Models
 
         public string Nome { get; set; }
 
-        public bool Ativo { get; set; }
+        public int Unidade { get; set; }
     }
 }

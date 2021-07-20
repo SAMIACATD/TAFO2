@@ -16,12 +16,9 @@ namespace AlimentosTFOQ.Controllers
             new GrupoProdutoModel() {Id=3, Nome="Farinhas", Ativo=true},
             new GrupoProdutoModel() {Id=4, Nome="Enlatados", Ativo=false}
         };
-        private static readonly List<GrupoProdutoModel> _listaGrupoProduto = grupoProdutoModels;
+        private static readonly List<GrupoProdutoModel> _ListaGrupoProduto = grupoProdutoModels;
 
-        public ActionResult GrupoProduto()
-        {
-            return View();
-        }
+        public ActionResult GrupoProduto(_ListaGrupoProduto) => View();
 
         public ActionResult MarcaProduto()
         {
