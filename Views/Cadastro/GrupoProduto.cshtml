@@ -37,33 +37,40 @@
 
             <div class="row">
                 <div class="col-md-12">
+
                     <div class="col-md-12">
-                        <a id="btn_incluir" class="btn btn-success" role="button"><i class="glyphicon glyphicon-plus"></i> incluir</a>
 
                     </div>
                     <table id="grid_cadastro" class="table table-bordered table-striped table-hover">
                         <thead>
                             <tr>
-                                <th>Id</th>
+                                <th>Código</th>
                                 <th>Nome</th>
                                 <th>Ativo</th>
-                                <th>Ação</th>
+                                <th>Alterar</th>
+                                <th>Excluir</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>SIM</td>
+                                <td><button class="btn btn-primary btn-alterar" role="button"><i class="glyphicon glyphicon-pencil"></i> Alterar</button></td>
+                                <td><button class="btn btn-danger btn-excluir" role="button"><i class="glyphicon glyphicon-trash"></i>Excluir</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>samia</td>
+                                <td>SIM</td>
+                                <td><button class="btn btn-primary btn-alterar" role="button"><i class="glyphicon glyphicon-pencil"></i> Alterar</button></td>
+                                <td><button class="btn btn-danger btn-excluir" role="button"><i class="glyphicon glyphicon-trash"></i>Excluir</button></td>
+
                             </tr>
 
                         </thead>
-                        <tbody>
-                            @foreach (var item in Model)
-                             {
-                             <tr>
-                                <td>@item.Id</td>
-                                <td>@item.Nome</td>
-                                <td>@item.Ativo</td>
-                              </tr>
-                             }
-
-                        </tbody>
 
                     </table>
+
+                    <a id="btn_incluir" class="btn btn-success" role="button"><i class="glyphicon glyphicon-plus"></i> incluir</a>
 
                 </div>
 
@@ -73,6 +80,13 @@
 
     </section>
 </div>
+@section scripts{
+    <script>
+        $(document).on('.click', '#btn_incluir', function ().alert('1'); {
+
+        }
+    </script>
+}
 
 
 

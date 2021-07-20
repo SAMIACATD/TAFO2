@@ -3,5 +3,74 @@
     ViewBag.Title = "UnidadeMedida";
 }
 
-<h2>UnidadeMedida</h2>
+<h2>Unidade de Medida</h2>
+
+<!-- Primeira Linha-->
+<div class="form-group row">
+    <div class="col-sm-6">
+        <label>Código</label>
+        <input type="text" id="razao-social" class="form-control" MaxLength="15" />
+    </div>
+
+</div>
+<!-- Segunda Linha-->
+<div class="form-group row">
+    <div class="col-sm-6">
+        <label>Nome</label>
+        <input type="text" id="cnpj" class="form-control" />
+    </div>
+</div>
+
+<!-- Terceira Linha-->
+<div class="form-group row">
+    <div class="col-sm-6">
+        <label>Sigla</label>
+        <input type="text" id="fone" class="form-control" />
+    </div>
+</div>
+<!-- Quarta Linha-->
+<div class="form-group row">
+    <div class="col-sm-6">
+        <label>Quantidade</label>
+        <input type="text" id="quantidade" class="form-control" />
+        
+    </div>
+</div>
+<div class="form-group row">
+    <section class="text-lg-right">
+        <td>
+            <a id="btn_incluir" class="btn btn-success" role="button"><i class="glyphicon glyphicon-plus"></i> incluir</a>
+            <a class="btn btn-primary btn-alterar" role="button"><i class="glyphicon glyphicon-pencil"></i> Alterar</a>
+            <a class="btn btn-danger btn-excluir" role="button"><i class="glyphicon glyphicon-trash"></i> Excluir</a>
+        </td>
+    </section>
+</div>
+
+<script>
+
+    function Salvar() {
+        var empresa = new Object();
+        empresa.RezaoSocial = $('#razao-social').val();
+        empresa.DataCadastro = $('#data-cadastro').val();
+        empresa.Cnpj = $('#cnpj').val();
+        empresa.Fone = $('#fone').val();
+
+
+
+        $.ajax({
+            type: "POST",
+            url: "/empresa/Add",
+            data: empresa,
+            dataType: 'json',
+            success: function (obj) {
+                alert(obj);
+                location.href = '/empresa';
+            },
+            error: function (error) {
+
+            }
+        });
+
+    }
+</script>
 

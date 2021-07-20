@@ -3,5 +3,47 @@
     ViewBag.Title = "MarcaProduto";
 }
 
-<h2>MarcaProduto</h2>
+<h2>Marca do Produto</h2>
+<div class="card">
 
+    <table class="table table-striped">
+
+        <tbody>
+
+            <tr>
+                <td ="col"><h4>Código</h4></td>
+                <td ="col"><h4>Nome</h4></td>
+                <td ="col"><h4>Tipo</h4></td>
+
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>samia</td>
+                <td>000214000/0001-54</td>
+               
+            </tr>
+
+        </tbody>
+    </table>
+    <div class="form-group row">
+
+        <section class="text-lg-right">
+            <a id="btn_incluir" class="btn btn-success" role="button"><i class="glyphicon glyphicon-plus"></i> incluir</a>
+            <td><button class="btn btn-primary btn-alterar" role="button"><i class="glyphicon glyphicon-pencil"></i> Alterar</button></td>
+            <td><button class="btn btn-danger btn-excluir" role="button"><i class="glyphicon glyphicon-trash"></i>Excluir</button></td>
+
+        </section>
+    </div>
+
+</div>
+
+<script>
+    function ExibirMsg() {
+        alert('Cadastro Incluido');
+    }
+</script>

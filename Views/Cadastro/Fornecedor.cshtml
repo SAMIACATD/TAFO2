@@ -4,75 +4,61 @@
 }
 
 <h2>Lista de Fornecedores</h2>
+<div class ="card"> 
 
-<table class="table table-striped">
+    <table class="table table-striped">
+
+        <tbody>
+
+            <tr>
+                <td ="col"><h4>Código</h4></td>
+                <td ="col"><h4>Nome</h4></td>
+                <td ="col"><h4>CNPJ</h4></td>
+                <td ="col"><h4>Fone</h4></td>
+                <td ="col"><h4>Alterar</h4></td>
+                <td ="col"><h4>Excluir</h4></td>
+
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>mdo</td>
+                <td><button class="btn btn-primary btn-alterar" role="button"><i class="glyphicon glyphicon-pencil"></i> Alterar</button></td>
+                <td><button class="btn btn-danger btn-excluir" role="button"><i class="glyphicon glyphicon-trash"></i>Excluir</button></td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>samia</td>
+                <td>000214000/0001-54</td>
+                <td>32697844</td>
+                <td><button class="btn btn-primary btn-alterar" role="button"><i class="glyphicon glyphicon-pencil"></i> Alterar</button></td>
+                <td><button class="btn btn-danger btn-excluir" role="button"><i class="glyphicon glyphicon-trash"></i>Excluir</button></td>
+            </tr>
+
+        </tbody>
+    </table>
+    <div class="form-group row">
+
+        <section class="text-lg-right">
+
+            <td>
+                <a id="btn_incluir" class="btn btn-success" role="button"><i class="glyphicon glyphicon-plus"></i> incluir</a>
+            </td>
+
+        </section>
+    </div>
+    <script>
+
+        function Salvar() {
+            var Cadastro = new Object();
+            Cadastro.Id = $('#id').val();
+            Cadastro.Nome = $('#nome').val();
+            Cadastro.Cnpj = $('#cnpj').val();
+            Cadastro.Fone = $('#fone').val();
+
+        }
+    </script>
+</div>
+        
  
-    <tbody>
-
-        <tr>
-            <td ="col"><h4>Código</h4></td>
-            <td ="col"><h4>Nome</h4></td>
-            <td ="col"><h4>CNPJ</h4></td>
-            <td ="col"><h4>Fone</h4></td>
-            <td ="col"><h4>Alterar</h4></td>
-            <td ="col"><h4>Excluir</h4></td>
-
-        </tr>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>mdo</td>
-            <td><button class="btn btn-primary btn-alterar" role="button"><i class="glyphicon glyphicon-pencil"></i> Alterar</button></td>
-            <td><button class="btn btn-danger btn-excluir" role="button"><i class="glyphicon glyphicon-trash"></i>Excluir</button></td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>samia</td>
-            <td>000214000/0001-54</td>
-            <td>32697844</td>
-            <td><button class="btn btn-primary btn-alterar" role="button"><i class="glyphicon glyphicon-pencil"></i> Alterar</button></td>
-            <td><button class="btn btn-danger btn-excluir" role="button"><i class="glyphicon glyphicon-trash"></i>Excluir</button></td>
-        </tr>
-
-    </tbody>
-</table>
-        <div class="form-group row">
-
-            <section class="text-lg-right">
-
-                <td>
-                    <a id="btn_incluir" class="btn btn-success" role="button"><i class="glyphicon glyphicon-plus"></i> incluir</a>
-                </td>
-
-            </section>
-        </div>
-
-
-        <script>
-
-            function Salvar() {
-                var Cadastro = new Object();
-                Cadastro.Id = $('#id').val();
-                Cadastro.Nome = $('#nome').val();
-                Cadastro.Cnpj = $('#cnpj').val();
-                Cadastro.Fone = $('#fone').val();
-
-
-
-                $.ajax({
-                    type: "POST",
-                    url: "/cadastro/Add",
-                    data: Cadastro,
-                    dataType: 'json',
-                    success: function (obj) {
-                        alert(obj);
-                        location.href = '/cadastro';
-                    },
-                    error: function (error) {
-
-                    }
-                });
-
-            }
-        </script>
